@@ -28,8 +28,9 @@
       <Steel>25</Steel>
     </costList>
     <comps>
-      <li Class="CeilingLights.CompProperties_PowerConsume">
-        <basePowerConsumption>2000</basePowerConsumption>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>15</basePowerConsumption>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>22</glowRadius>
@@ -78,8 +79,7 @@
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <comps>
-		  <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
+      <li Class="CeilingLights.CompProperties_PowerConsume">
         <basePowerConsumption>2000</basePowerConsumption>
       </li>
       <li Class="CompProperties_Glower">
