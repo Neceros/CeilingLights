@@ -7,5 +7,8 @@
     <li>1.1</li>
   </supportedVersions>
   <packageId>neceros.ceilinglights</packageId>
+  <incompatibleWith>
+    <li>neceros.ceilinglightsvanillaedition</li>
+  </incompatibleWith>
 	<description>Adds two hanging ceiling lamps. Out of sight bright light. The ceiling grow lamp outputs ultraviolet light for ultimate plant nutritional needs.</description>
 </ModMetaData>

@@ -4,13 +4,13 @@
   <ThingDef ParentName="BuildingBase">
     <defName>Lighting_CeilingLight</defName>
     <label>ceiling light</label>
-    <description>A ceiling light that emits special ultraviolet frequencies, thus enabling optimal plant growth.</description>
+    <description>A ceiling light that emits comfortable, eye-friendly white light.</description>
     <thingClass>Building</thingClass>
     <category>Building</category>
     <graphicData>
-      <texPath>CeilingGrowLight</texPath>
+      <texPath>CeilingLight</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(2,2)</drawSize>
+      <shaderType>Transparent</shaderType>
     </graphicData>
     <uiIconPath>CeilingLightIcon</uiIconPath>
     <building>
@@ -33,7 +33,7 @@
         <basePowerConsumption>15</basePowerConsumption>
       </li>
       <li Class="CompProperties_Glower">
-        <glowRadius>22</glowRadius>
+        <glowRadius>21.9</glowRadius>
         <glowColor>(217,217,208,0)</glowColor>
       </li>
       <li Class="CompProperties_Flickable"/>
@@ -53,13 +53,13 @@
   <ThingDef ParentName="BuildingBase">
     <defName>Lighting_CeilingGrowLight</defName>
     <label>ceiling grow light</label>
-    <description>A ceiling light that sheds ultraviolet light to grow plants and warm the skin. Wear sun lotion.</description>
+    <description>A ceiling light that sheds full spectrum light to grow plants and warm the skin. Wear sun lotion.</description>
     <thingClass>Building</thingClass>
     <category>Building</category>
     <graphicData>
       <texPath>CeilingGrowLight</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(2,2)</drawSize>
+      <shaderType>Transparent</shaderType>
     </graphicData>
     <uiIconPath>CeilingGrowIcon</uiIconPath>
     <building>
@@ -79,8 +79,9 @@
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <comps>
-      <li Class="CeilingLights.CompProperties_PowerConsume">
-        <basePowerConsumption>2000</basePowerConsumption>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1000</basePowerConsumption>
       </li>
       <li Class="CompProperties_Glower">
         <overlightRadius>16</overlightRadius>
