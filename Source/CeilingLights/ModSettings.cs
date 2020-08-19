@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using RimWorld;
+using System.Linq;
+using UnityEngine;
 using Verse;
 
 namespace CeilingLights
@@ -6,15 +8,17 @@ namespace CeilingLights
   public class CeilingLightsSettings : ModSettings
   {
     public static int GrowLightPowerConsumption => growLPC;
+    public static bool ForceRoofRequired => forceRR;
 
-    // despite the public flag, don't reference the below var(s); they're only public for the purposes of the mod settings screen below. Reference the above variables instead.
     public static int growLPC;
+    public static bool forceRR = true;
     public static string growLPCTooltip = ""; // Cant translate CLSettingsGrowLPCTooltip for some reason
 
     public override void ExposeData()
     {
       base.ExposeData();
       Scribe_Values.Look(ref growLPC, "growLightPowerConsumption");
+      Scribe_Values.Look(ref forceRR, "forceRoofRequired");
     }
   }
 
@@ -33,6 +37,12 @@ namespace CeilingLights
       listing.TextFieldNumericLabeled<int>("CLSettingsGrowLPC".Translate(), ref CeilingLightsSettings.growLPC, ref CeilingLightsSettings.growLPCTooltip);
       listing.End();
       base.DoSettingsWindowContents(inRect);
+      WriteSettings();
+    }
+
+    public override void WriteSettings()
+    {
+      // DefDatabase<ThingDef>.GetNamed("Lighting_CeilingLight").comps.First<CompProperties_PowerConsume>().basePowerConsumption => CeilingLightsSettings.GrowLightPowerConsumption;
     }
 
     public override string SettingsCategory()
