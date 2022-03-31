@@ -31,10 +31,6 @@
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>15</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>21.9</glowRadius>
-        <glowColor>(217,217,208,0)</glowColor>
-      </li>
       <li Class="CompProperties_Flickable"/>
     </comps>
     <rotatable>false</rotatable>
@@ -48,6 +44,7 @@
       <li>Electricity</li>
     </researchPrerequisites>
   </ThingDef>
+
   <ThingDef Name="CeilingLight" ParentName="CeilingLightBase">
     <defName>Lighting_CeilingLight</defName>
     <label>ceiling light</label>
@@ -56,17 +53,13 @@
     <designationCategory>Furniture</designationCategory>
     <designatorDropdown>CeilingLights</designatorDropdown>
     <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>15</basePowerConsumption>
-      </li>
       <li Class="CompProperties_Glower">
         <glowRadius>21.9</glowRadius>
         <glowColor>(217,217,208,0)</glowColor>
       </li>
-      <li Class="CompProperties_Flickable"/>
     </comps>
   </ThingDef>
+
   <ThingDef Name="CeilingGrowLight" ParentName="CeilingLightBase">
     <defName>Lighting_CeilingGrowLight</defName>
     <label>ceiling grow light</label>
@@ -83,10 +76,6 @@
       <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>1000</basePowerConsumption>
-      </li>
       <li Class="CompProperties_Glower">
         <overlightRadius>16</overlightRadius>
         <glowRadius>20</glowRadius>
@@ -97,10 +86,10 @@
         <heatPerSecond>18</heatPerSecond>
         <heatPushMaxTemperature>30</heatPushMaxTemperature>
       </li>
-      <li Class="CompProperties_Flickable"/>
     </comps>
     <specialDisplayRadius>13.9</specialDisplayRadius>
   </ThingDef>
+
   <ThingDef Name="CeilingLightDark" ParentName="CeilingLightBase">
     <defName>Lighting_CeilingLightDark</defName>
     <label>ceiling light dark</label>
@@ -109,12 +98,8 @@
     <designationCategory>Furniture</designationCategory>
     <designatorDropdown>CeilingLights</designatorDropdown>
     <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>15</basePowerConsumption>
-      </li>
       <li Class="CompProperties_Glower">
-        <glowRadius>21.9</glowRadius>
+        <glowRadius>20</glowRadius>
         <glowColor>(78, 226, 229, 0)</glowColor>
       </li>
       <li Class="CompProperties_Flickable"/>
